@@ -32,11 +32,11 @@ public class FrontendController {
 		return dockerService.fetchContainers();
 	}
 	
-	@GetMapping("/container_stats/{id}")
-	public List<ContainerStats> fetchContainerStats(@PathVariable String id){
-		return new List<ContainerStats>() {
-		};
-	}
+//	@GetMapping("/container_stats/{id}")
+//	public List<ContainerStats> fetchContainerStats(@PathVariable String id){
+//		return new List<ContainerStats>() {
+//		};
+//	}
 	
 	@GetMapping("/ai/overall_statistics")
 	public UI_AIResponse overallStats() {
