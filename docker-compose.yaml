@@ -8,16 +8,19 @@ services:
       - 27017:27017
     volumes:
       - mongodb:/data/db
-    restart: always	
+    restart: always
+
   edge_ai_backend:
-    image: mongo:latest
+    image: anuragdc/edge_ai:1.0
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: root
+      DOCKER_HOST_URL: 192.168.0.101
+      DOCKER_HOST_PORT: 2375
+      AI_HOST_URL: 119.82.109.194
+      AI_HOST_PORT: 1234
     ports:
-      - 27017:27017
-    volumes:
-      - mongodb:/data/db
-    restart: always	  
+      - 8080:8080
+    restart: always
+    depends_on:
+      - mongodb
 volumes:
   mongodb:
