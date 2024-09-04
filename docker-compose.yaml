@@ -17,7 +17,7 @@ services:
       DOCKER_HOST_PORT: 2375
       AI_HOST_URL: 119.82.109.194
       AI_HOST_PORT: 1234
-      MONGO_IP: mongodb://root:root@127.0.0.1:27017
+      MONGO_IP: mongodb://root:root@mongodb:27017
     ports:
       - 8080:8080
     restart: always
