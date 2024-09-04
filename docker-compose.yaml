@@ -11,12 +11,13 @@ services:
     restart: always
 
   edge_ai_backend:
-    image: anuragdc/edge_ai:1.0
+    image: anuragdc/edge_ai:latest
     environment:
       DOCKER_HOST_URL: 192.168.0.101
       DOCKER_HOST_PORT: 2375
-      AI_HOST_URL: 192.168.0.70
+      AI_HOST_URL: 119.82.109.194
       AI_HOST_PORT: 1234
+      MONGO_IP: mongodb://root:root@127.0.0.1:27017
     ports:
       - 8080:8080
     restart: always
