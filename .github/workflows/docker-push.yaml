@@ -28,3 +28,10 @@ jobs:
           file: Dockerfile
           push: true
           tags: anuragdc/edge_ai:1.0
+      -
+        name: Build and push
+        uses: docker/build-push-action@v5 
+        with:
+          file: Dockerfile
+          push: true
+          tags: anuragdc/edge_ai:latest   
