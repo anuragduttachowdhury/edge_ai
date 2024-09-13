@@ -1,0 +1,26 @@
+/* Add this CSS to your styles file or in a <style> tag */
+@keyframes loadingAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .loading-message {
+    font-size: 18px;
+    color: #007bff; /* Adjust color as needed */
+    animation: loadingAnimation 1.5s infinite;
+  }
+  
